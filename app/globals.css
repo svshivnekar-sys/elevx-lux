@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Design tokens */
+:root{
+  --elevx-navy: #061427;
+  --elevx-teal: #00C2A3;
+  --elevx-orange: #FF6A00;
+  --elevx-text: #E6EEF2;
+  --elevx-muted: #9FB2BD;
+}
+
+/* Ensure dark class controls theme */
+html.dark, body.dark {
+  background-color: var(--elevx-navy);
+  color: var(--elevx-text);
+}
