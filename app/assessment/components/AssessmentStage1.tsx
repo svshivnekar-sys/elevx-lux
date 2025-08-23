@@ -317,10 +317,10 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                 value="A"
                 checked={responses.partA[question.id] === 'A'}
                 onChange={() => handlePartAAnswer(question.id, 'A')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <label htmlFor={`${question.id}-A`} className="flex-1 text-text-body cursor-pointer">
-                <span className="font-medium text-primary-orange">A)</span> {question.A}
+                <span className="font-medium text-primary-accent">A)</span> {question.A}
               </label>
             </div>
             
@@ -332,10 +332,10 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                 value="B"
                 checked={responses.partA[question.id] === 'B'}
                 onChange={() => handlePartAAnswer(question.id, 'B')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <label htmlFor={`${question.id}-B`} className="flex-1 text-text-body cursor-pointer">
-                <span className="font-medium text-primary-aqua">B)</span> {question.B}
+                <span className="font-medium text-secondary-accent">B)</span> {question.B}
               </label>
             </div>
           </div>
@@ -416,7 +416,7 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                   className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 mt-1"
                 />
                 <span className="text-text-body">
-                  <span className="font-medium text-primary-orange">{option.value})</span> {option.text}
+                  <span className="font-medium text-primary-accent">{option.value})</span> {option.text}
                 </span>
               </label>
             ))}
