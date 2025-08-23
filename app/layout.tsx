@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -16,6 +17,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Temporary Tailwind CDN - replace with proper installation */}
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            tailwind.config = {
+              darkMode: 'class',
+              theme: {
+                extend: {
+                  colors: {
+                    elevx: {
+                      navy: '#061427',
+                      teal: '#00C2A3',
+                      orange: '#FF6A00'
+                    }
+                  }
+                }
+              }
+            }
+          `
+        }} />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

@@ -2,25 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 /* Design tokens */
 :root{
   --elevx-navy: #061427;
@@ -34,4 +15,31 @@ body {
 html.dark, body.dark {
   background-color: var(--elevx-navy);
   color: var(--elevx-text);
+}
+
+/* Button */
+.btn-primary {
+  @apply inline-flex items-center gap-3 px-5 py-2 rounded-2xl font-semibold shadow-sm;
+  background: linear-gradient(90deg,var(--elevx-teal), var(--elevx-orange));
+  color: white;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+/* Card */
+.card {
+  @apply rounded-xl p-4;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.006));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.skeleton { /* shimmer */
+  background: linear-gradient(90deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.02) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer { 
+  from { background-position: 200% 0 } 
+  to { background-position: -200% 0 } 
 }

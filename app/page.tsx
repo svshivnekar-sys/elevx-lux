@@ -1,9 +1,16 @@
+import React from 'react'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-4xl font-bold">ElevX</h1>
-        <p className="text-xl">Hyper-personalized micro-learning</p>
+    <main className="min-h-screen bg-elevx-navy text-elevx-text">
+      <div className="container mx-auto px-4 py-24">
+        <div className="bg-elevx-navy text-elevx-text p-8 rounded-xl">
+          <h1 className="text-4xl font-bold mb-4">ElevX</h1>
+          <p className="text-xl text-elevx-muted">Hyper-personalized micro-learning</p>
+          <div className="mt-8">
+            <button className="btn-primary">Tailwind Test Button</button>
+          </div>
+        </div>
       </div>
     </main>
   )
