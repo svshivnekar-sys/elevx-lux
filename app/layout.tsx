@@ -17,30 +17,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Temporary Tailwind CDN - replace with proper installation */}
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            tailwind.config = {
-              darkMode: 'class',
-              theme: {
-                extend: {
-                  colors: {
-                    elevx: {
-                      navy: '#061427',
-                      teal: '#00C2A3',
-                      orange: '#FF6A00'
-                    }
-                  }
-                }
-              }
-            }
-          `
-        }} />
-      </head>
-      <body className={`${inter.className} min-h-screen bg-elevx-navy text-elevx-text`}>
+    <html lang="en" className="dark">
+      <body className={`${inter.className} min-h-screen bg-primary-bg text-text-body antialiased`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>
