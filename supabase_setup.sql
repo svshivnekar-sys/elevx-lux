@@ -62,3 +62,4 @@ ORDER BY ar.completed_at DESC;
 
 -- Grant access to the view
 GRANT SELECT ON assessment_summary TO authenticated;
+

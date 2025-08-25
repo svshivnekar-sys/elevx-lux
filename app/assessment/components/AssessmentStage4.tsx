@@ -627,3 +627,4 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
     </div>
   );
 }
+

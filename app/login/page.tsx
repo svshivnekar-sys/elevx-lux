@@ -172,11 +172,11 @@ export default function LoginPage() {
                     placeholder="Enter your email"
                     className={`w-full px-4 py-3 rounded-xl border transition-all duration-200 focus:outline-none focus:ring-2 ${
                       isValidEmail && email
-                        ? 'border-secondary-accent/50 focus:border-secondary-accent focus:ring-secondary-accent/20'
+                        ? 'border-primary-aqua/50 focus:border-primary-aqua focus:ring-primary-aqua/20'
                         : email && !isValidEmail
                         ? 'border-status-error/50 focus:border-status-error focus:ring-status-error/20'
-                        : 'border-border-subtle focus:border-primary-accent/50 focus:ring-primary-accent/20'
-                    } bg-secondary-bg/5 text-text-headings placeholder-text-muted`}
+                        : 'border-white/[0.1] focus:border-primary-orange/50 focus:ring-primary-orange/20'
+                    } bg-white/[0.05] text-text-headings placeholder-text-muted`}
                     disabled={isLoading}
                     required
                   />
@@ -192,7 +192,7 @@ export default function LoginPage() {
                   type="submit"
                   variant="primary"
                   size="lg"
-                  className="w-full shadow-glow-primary-hover"
+                  className="w-full glow-orange-hover"
                   disabled={isLoading || !isValidEmail || !email || !supabaseClient}
                 >
                   {isLoading ? (
@@ -222,9 +222,9 @@ export default function LoginPage() {
                 )}
 
                 {/* Info Box */}
-                <div className="p-4 bg-secondary-accent/5 border border-secondary-accent/20 rounded-xl">
+                <div className="p-4 bg-primary-aqua/5 border border-primary-aqua/20 rounded-xl">
                   <div className="flex items-start gap-3">
-                    <span className="text-secondary-accent text-lg">💡</span>
+                    <span className="text-primary-aqua text-lg">💡</span>
                     <div className="text-sm text-text-muted">
                       <p className="font-medium text-text-headings mb-1">How it works:</p>
                       <ul className="space-y-1">
@@ -243,19 +243,19 @@ export default function LoginPage() {
             <div className="text-center mt-8 space-y-4">
               <p className="text-text-muted text-sm">
                 Don't have an account?{' '}
-                <Link href="/signup" className="text-primary-accent hover:text-primary-accent/80 transition-colors">
+                <Link href="/signup" className="text-primary-orange hover:text-primary-orange/80 transition-colors">
                   Sign up here
                 </Link>
               </p>
               
               <div className="flex justify-center gap-6 text-sm">
-                <Link href="/resources" className="text-text-muted hover:text-secondary-accent transition-colors">
+                <Link href="/resources" className="text-text-muted hover:text-primary-aqua transition-colors">
                   Resources
                 </Link>
-                <Link href="/assessment" className="text-text-muted hover:text-secondary-accent transition-colors">
+                <Link href="/assessment" className="text-text-muted hover:text-primary-aqua transition-colors">
                   Take Assessment
                 </Link>
-                <Link href="/help" className="text-text-muted hover:text-secondary-accent transition-colors">
+                <Link href="/help" className="text-text-muted hover:text-primary-aqua transition-colors">
                   Help
                 </Link>
               </div>

@@ -278,7 +278,7 @@ export default function Home() {
             <div className="text-center mt-12">
                               <Button variant="primary" size="lg" className="shadow-glow-primary-hover mb-4">
                   Start Your Free Assessment
-                </Button>
+              </Button>
               <p className="text-text-muted text-sm">Takes 5 minutes. Immediate personalized plan.</p>
             </div>
           </div>

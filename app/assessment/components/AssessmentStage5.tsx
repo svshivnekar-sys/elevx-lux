@@ -282,3 +282,4 @@ export default function AssessmentStage5({ onComplete }: AssessmentStage5Props) 
     </div>
   );
 }
+

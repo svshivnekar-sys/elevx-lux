@@ -329,9 +329,9 @@ export default function ResourcesPage() {
               Take our free assessment to get personalized insights and a custom learning path designed just for you.
             </p>
             
-            <Button variant="primary" size="lg" className="shadow-glow-primary-hover">
-              Take Free Assessment Now
-            </Button>
+                          <Button variant="primary" size="lg" className="shadow-glow-primary-hover">
+                Take Free Assessment Now
+              </Button>
           </div>
         </section>
       </main>
