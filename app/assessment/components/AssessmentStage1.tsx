@@ -317,10 +317,10 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                 value="A"
                 checked={responses.partA[question.id] === 'A'}
                 onChange={() => handlePartAAnswer(question.id, 'A')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <label htmlFor={`${question.id}-A`} className="flex-1 text-text-body cursor-pointer">
-                <span className="font-medium text-primary-orange">A)</span> {question.A}
+                <span className="font-medium text-primary-accent">A)</span> {question.A}
               </label>
             </div>
             
@@ -332,10 +332,10 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                 value="B"
                 checked={responses.partA[question.id] === 'B'}
                 onChange={() => handlePartAAnswer(question.id, 'B')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <label htmlFor={`${question.id}-B`} className="flex-1 text-text-body cursor-pointer">
-                <span className="font-medium text-primary-aqua">B)</span> {question.B}
+                <span className="font-medium text-secondary-accent">B)</span> {question.B}
               </label>
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                 value="Yes"
                 checked={responses.partB[question.id] === 'Yes'}
                 onChange={() => handlePartBAnswer(question.id, 'Yes')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <span className="text-text-body">Yes</span>
             </label>
@@ -379,7 +379,7 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                 value="No"
                 checked={responses.partB[question.id] === 'No'}
                 onChange={() => handlePartBAnswer(question.id, 'No')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <span className="text-text-body">No</span>
             </label>
@@ -413,10 +413,10 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
                   value={option.value}
                   checked={responses.partC[question.id] === option.value}
                   onChange={() => handlePartCAnswer(question.id, option.value)}
-                  className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 mt-1"
+                  className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 mt-1"
                 />
                 <span className="text-text-body">
-                  <span className="font-medium text-primary-orange">{option.value})</span> {option.text}
+                  <span className="font-medium text-primary-accent">{option.value})</span> {option.text}
                 </span>
               </label>
             ))}
@@ -431,7 +431,7 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
       {/* Micro-reveal Toast */}
       {showMicroReveal && (
         <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="bg-gradient-to-r from-primary-orange to-primary-aqua text-white px-6 py-3 rounded-full shadow-lg">
+          <div className="bg-gradient-to-r from-primary-accent to-secondary-accent text-white px-6 py-3 rounded-full shadow-lg">
             {currentPart === 'B' && "Got it—your natural pattern is becoming clear."}
             {currentPart === 'C' && "We've spotted your core strengths and stress patterns. Ready to see the headline?"}
           </div>
@@ -450,7 +450,7 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
             onClick={handleNextPart}
             variant="primary"
             size="lg"
-            className="glow-orange-hover"
+            className="shadow-glow-primary-hover"
           >
             {currentPart === 'C' ? 'Complete Assessment' : 'Continue'}
           </Button>
@@ -465,7 +465,7 @@ export default function AssessmentStage1({ onComplete }: AssessmentStage1Props) 
 
       {/* End-of-Section Cliffhanger */}
       {currentPart === 'C' && (
-        <div className="mt-8 p-6 bg-gradient-to-r from-primary-orange/10 to-primary-aqua/10 border border-primary-orange/20 rounded-2xl text-center">
+        <div className="mt-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20 rounded-2xl text-center">
           <p className="text-text-body mb-4">
             Nice. We've built your personality snapshot. Next, we'll tune how you learn best so your 21-day plan feels natural—not forced.
           </p>

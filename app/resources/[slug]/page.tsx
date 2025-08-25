@@ -137,13 +137,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <nav className="mb-8">
                 <ol className="flex items-center space-x-2 text-sm text-text-muted">
                   <li>
-                    <Link href="/" className="hover:text-primary-orange transition-colors">
+                    <Link href="/" className="hover:text-primary-accent transition-colors">
                       Home
                     </Link>
                   </li>
                   <li>•</li>
                   <li>
-                    <Link href="/resources" className="hover:text-primary-orange transition-colors">
+                    <Link href="/resources" className="hover:text-primary-accent transition-colors">
                       Resources
                     </Link>
                   </li>
@@ -157,7 +157,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Article Meta */}
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-primary-orange text-sm font-medium">{post.category}</span>
+                  <span className="text-primary-accent text-sm font-medium">{post.category}</span>
                   <span className="text-text-muted text-sm">•</span>
                   <span className="text-text-muted text-sm">{post.readTime}</span>
                   <span className="text-text-muted text-sm">•</span>
@@ -173,8 +173,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </p>
                 
                 {/* Author Info */}
-                <div className="flex items-center gap-4 p-4 bg-white/[0.02] rounded-xl border border-white/[0.05]">
-                  <div className="w-12 h-12 bg-gradient-orange rounded-full flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 bg-secondary-bg/5 rounded-xl border border-border-subtle">
+                  <div className="w-12 h-12 bg-gradient-primary-accent rounded-full flex items-center justify-center">
                     <span className="text-white font-bold">
                       {post.author.split(' ').map(n => n[0]).join('')}
                     </span>
@@ -195,7 +195,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="max-w-4xl mx-auto">
               {/* Featured Image */}
               <div className="mb-12">
-                <div className="w-full h-64 bg-gradient-to-br from-primary-orange/20 to-primary-aqua/20 rounded-2xl flex items-center justify-center">
+                <div className="w-full h-64 bg-gradient-to-br from-primary-accent/20 to-secondary-accent/20 rounded-2xl flex items-center justify-center">
                   <span className="text-6xl">📚</span>
                 </div>
               </div>
@@ -209,13 +209,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </article>
               
               {/* Tags */}
-              <div className="mt-12 pt-8 border-t border-white/[0.05]">
+              <div className="mt-12 pt-8 border-t border-border-subtle">
                 <h3 className="text-lg font-semibold mb-4 text-text-headings">Tags</h3>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-white/[0.05] rounded-full text-sm text-text-muted hover:bg-primary-orange/10 hover:text-primary-orange transition-colors cursor-pointer"
+                      className="px-3 py-1 bg-secondary-bg/5 rounded-full text-sm text-text-muted hover:bg-primary-accent/10 hover:text-primary-accent transition-colors cursor-pointer"
                     >
                       #{tag}
                     </span>
@@ -237,12 +237,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Card key={relatedPost.slug} className="hover:scale-[1.02] transition-transform duration-300">
                     <div className="p-6">
                       <div className="flex items-center gap-4 mb-3">
-                        <span className="text-primary-aqua text-sm font-medium">{relatedPost.category}</span>
+                        <span className="text-secondary-accent text-sm font-medium">{relatedPost.category}</span>
                         <span className="text-text-muted text-sm">•</span>
                         <span className="text-text-muted text-sm">{relatedPost.readTime}</span>
                       </div>
                       
-                      <h3 className="text-xl font-bold mb-3 text-text-headings hover:text-primary-aqua transition-colors">
+                      <h3 className="text-xl font-bold mb-3 text-text-headings hover:text-secondary-accent transition-colors">
                         {relatedPost.title}
                       </h3>
                       
@@ -252,7 +252,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-gradient-aqua rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-gradient-secondary-accent rounded-full flex items-center justify-center">
                             <span className="text-white text-xs font-bold">
                               {relatedPost.author.split(' ').map(n => n[0]).join('')}
                             </span>
@@ -287,7 +287,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               Take our free assessment to get personalized insights and a custom learning path designed just for you.
             </p>
             
-            <Button variant="primary" size="lg" className="glow-orange-hover">
+            <Button variant="primary" size="lg" className="shadow-glow-primary-hover">
               Take Free Assessment Now
             </Button>
           </div>

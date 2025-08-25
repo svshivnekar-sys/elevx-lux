@@ -33,7 +33,7 @@ function DashboardContent({ user }: DashboardContentProps) {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
             {/* Welcome Banner */}
-            <div className="mb-8 p-6 bg-gradient-to-r from-primary-orange/10 to-primary-aqua/10 border border-primary-orange/20 rounded-2xl">
+            <div className="mb-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20 rounded-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <h1 className="text-3xl font-bold mb-2 text-text-headings">
@@ -65,16 +65,16 @@ function DashboardContent({ user }: DashboardContentProps) {
                 {/* Empty State for Journeys */}
                 <Card className="p-8 text-center">
                   <div className="max-w-md mx-auto">
-                    <div className="w-16 h-16 bg-gradient-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-2xl">🎯</span>
-                    </div>
+                                    <div className="w-16 h-16 bg-gradient-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-2xl">🎯</span>
+                </div>
                     <h3 className="text-xl font-semibold mb-2 text-text-headings">
                       Ready to Start Your Journey?
                     </h3>
                     <p className="text-text-muted mb-6">
                       Your personalized Foundation Journey will appear here after you take the assessment.
                     </p>
-                    <Button variant="primary" className="glow-orange-hover">
+                    <Button variant="primary" className="shadow-glow-primary-hover">
                       Take Free Assessment
                     </Button>
                   </div>
@@ -88,29 +88,29 @@ function DashboardContent({ user }: DashboardContentProps) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <Card>
                     <div className="p-6 text-center">
-                      <div className="w-12 h-12 bg-gradient-aqua rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-gradient-secondary-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                         <span className="text-white text-xl">📊</span>
                       </div>
                       <h3 className="font-semibold mb-1 text-text-headings">Assessment</h3>
-                      <p className="text-2xl font-bold text-primary-orange mb-1">0%</p>
+                      <p className="text-2xl font-bold text-primary-accent mb-1">0%</p>
                       <p className="text-text-muted text-sm">Not started</p>
                     </div>
                   </Card>
 
                   <Card>
                     <div className="p-6 text-center">
-                      <div className="w-12 h-12 bg-gradient-orange rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-gradient-primary-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                         <span className="text-white text-xl">📚</span>
                       </div>
                       <h3 className="font-semibold mb-1 text-text-headings">Lessons</h3>
-                      <p className="text-2xl font-bold text-primary-aqua mb-1">0</p>
+                      <p className="text-2xl font-bold text-secondary-accent mb-1">0</p>
                       <p className="text-text-muted text-sm">Completed</p>
                     </div>
                   </Card>
 
                   <Card>
                     <div className="p-6 text-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary-orange to-primary-aqua rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary-accent to-secondary-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                         <span className="text-white text-xl">🏆</span>
                       </div>
                       <h3 className="font-semibold mb-1 text-text-headings">Milestones</h3>
@@ -131,7 +131,7 @@ function DashboardContent({ user }: DashboardContentProps) {
                       <h3 className="text-lg font-semibold mb-4 text-text-headings">Account Information</h3>
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-gradient-orange rounded-full flex items-center justify-center">
+                          <div className="w-10 h-10 bg-gradient-primary-accent rounded-full flex items-center justify-center">
                             <span className="text-white font-bold">
                               {user?.email?.charAt(0).toUpperCase()}
                             </span>

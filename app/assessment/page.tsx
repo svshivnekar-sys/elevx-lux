@@ -103,7 +103,7 @@ function AssessmentContent({ user }: AssessmentPageProps) {
               {/* Progress Bar */}
               <div className="w-full bg-white/[0.05] rounded-full h-3 mb-4">
                 <div 
-                  className="bg-gradient-to-r from-primary-orange to-primary-aqua h-3 rounded-full transition-all duration-500"
+                  className="bg-gradient-to-r from-primary-accent to-secondary-accent h-3 rounded-full transition-all duration-500"
                   style={{ width: `${(currentStage / 5) * 100}%` }}
                 ></div>
               </div>

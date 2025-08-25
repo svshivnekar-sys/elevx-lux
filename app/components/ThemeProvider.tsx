@@ -46,7 +46,7 @@ export default function ThemeProvider({
       <button 
         aria-label="Toggle theme" 
         onClick={toggle} 
-        className="fixed z-50 right-4 top-4 p-3 rounded-xl glass-effect hover:bg-white/[0.05] transition-all duration-200 glow-orange-hover"
+                  className="fixed z-50 right-4 top-4 p-3 rounded-xl glass-effect hover:bg-secondary-bg/5 transition-all duration-200 shadow-glow-primary-hover"
       >
         {theme === 'dark' ? '🌙' : '☀️'}
       </button>
