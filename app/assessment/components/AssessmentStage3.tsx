@@ -508,10 +508,10 @@ export default function AssessmentStage3({ onComplete }: AssessmentStage3Props) 
               key={index}
               className={`w-3 h-3 rounded-full ${
                 index === currentSkill
-                  ? 'bg-primary-orange'
+                  ? 'bg-primary-accent'
                   : index < currentSkill
-                  ? 'bg-primary-aqua'
-                  : 'bg-white/[0.1]'
+                                     ? 'bg-secondary-accent'
+                                     : 'bg-border-subtle'
               }`}
             />
           ))}
@@ -539,10 +539,10 @@ export default function AssessmentStage3({ onComplete }: AssessmentStage3Props) 
                     value={option.value}
                     checked={responses[currentSkillData.name as keyof typeof responses][question.id] === option.value}
                     onChange={() => handleAnswer(currentSkillData.name, question.id, option.value)}
-                    className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 mt-1"
+                                         className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 mt-1"
                   />
                   <span className="text-text-body">
-                    <span className="font-medium text-primary-orange">{option.value})</span> {option.text}
+                                         <span className="font-medium text-primary-accent">{option.value})</span> {option.text}
                   </span>
                 </label>
               ))}
@@ -558,7 +558,7 @@ export default function AssessmentStage3({ onComplete }: AssessmentStage3Props) 
             onClick={handleNextSkill}
             variant="primary"
             size="lg"
-            className="glow-orange-hover"
+                         className="shadow-glow-primary-hover"
           >
             {currentSkill === skills.length - 1 ? 'Complete Assessment' : 'Continue to Next Skill'}
           </Button>
@@ -573,7 +573,7 @@ export default function AssessmentStage3({ onComplete }: AssessmentStage3Props) 
 
       {/* End-of-Section Cliffhanger */}
       {currentSkill === skills.length - 1 && (
-        <div className="mt-8 p-6 bg-gradient-to-r from-primary-orange/10 to-primary-aqua/10 border border-primary-orange/20 rounded-2xl text-center">
+                 <div className="mt-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20 rounded-2xl text-center">
           <p className="text-text-body mb-4">
             Great work! We've assessed your core skills. Next, we'll explore your goals and motivations to create your personalized path.
           </p>

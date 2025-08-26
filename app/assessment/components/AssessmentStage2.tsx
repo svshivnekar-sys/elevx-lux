@@ -277,7 +277,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
   };
 
   const renderMicroExperiment = () => (
-    <div className="mb-8 p-6 bg-gradient-to-r from-primary-aqua/10 to-primary-orange/10 border border-primary-aqua/20 rounded-2xl">
+            <div className="mb-8 p-6 bg-gradient-to-r from-secondary-accent/10 to-primary-accent/10 border border-secondary-accent/20 rounded-2xl">
       <h3 className="text-lg font-semibold mb-4 text-text-headings text-center">
         Quick Learning Style Test
       </h3>
@@ -288,7 +288,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card 
           className={`p-4 text-center cursor-pointer transition-all duration-200 hover:scale-105 ${
-            responses.microExperiment.firstClick === 'V' ? 'ring-2 ring-primary-orange' : ''
+                            responses.microExperiment.firstClick === 'V' ? 'ring-2 ring-primary-accent' : ''
           }`}
           onClick={() => handleMicroExperiment('V')}
         >
@@ -299,7 +299,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
         
         <Card 
           className={`p-4 text-center cursor-pointer transition-all duration-200 hover:scale-105 ${
-            responses.microExperiment.firstClick === 'A' ? 'ring-2 ring-primary-orange' : ''
+                            responses.microExperiment.firstClick === 'A' ? 'ring-2 ring-primary-accent' : ''
           }`}
           onClick={() => handleMicroExperiment('A')}
         >
@@ -310,7 +310,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
         
         <Card 
           className={`p-4 text-center cursor-pointer transition-all duration-200 hover:scale-105 ${
-            responses.microExperiment.firstClick === 'K' ? 'ring-2 ring-primary-orange' : ''
+                            responses.microExperiment.firstClick === 'K' ? 'ring-2 ring-primary-accent' : ''
           }`}
           onClick={() => handleMicroExperiment('K')}
         >
@@ -348,12 +348,12 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
                   value={option.value}
                   checked={responses.partA[question.id] === option.value}
                   onChange={() => handlePartAAnswer(question.id, option.value)}
-                  className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 mt-1"
+                  className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 mt-1"
                 />
                 <div className="flex items-center space-x-3">
                   <span className="text-2xl">{option.icon}</span>
                   <span className="text-text-body">
-                    <span className="font-medium text-primary-orange">{option.value})</span> {option.text}
+                    <span className="font-medium text-primary-accent">{option.value})</span> {option.text}
                   </span>
                 </div>
               </label>
@@ -388,12 +388,12 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
                   value={option.value}
                   checked={responses.partB[question.id] === option.value}
                   onChange={() => handlePartBAnswer(question.id, option.value)}
-                  className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 mt-1"
+                  className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 mt-1"
                 />
                 <div className="flex items-center space-x-3">
                   <span className="text-2xl">{option.icon}</span>
                   <span className="text-text-body">
-                    <span className="font-medium text-primary-orange">{option.value})</span> {option.text}
+                    <span className="font-medium text-primary-accent">{option.value})</span> {option.text}
                   </span>
                 </div>
               </label>
@@ -427,7 +427,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
                 value="Yes"
                 checked={responses.partC[question.id] === 'Yes'}
                 onChange={() => handlePartCAnswer(question.id, 'Yes')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <span className="text-text-body">Yes</span>
             </label>
@@ -439,7 +439,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
                 value="No"
                 checked={responses.partC[question.id] === 'No'}
                 onChange={() => handlePartCAnswer(question.id, 'No')}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <span className="text-text-body">No</span>
             </label>
@@ -454,7 +454,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
       {/* Micro-reveal Toast */}
       {showMicroReveal && (
         <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="bg-gradient-to-r from-primary-aqua to-primary-orange text-white px-6 py-3 rounded-full shadow-lg">
+          <div className="bg-gradient-to-r from-secondary-accent to-primary-accent text-white px-6 py-3 rounded-full shadow-lg">
             {currentPart === 'B' && "Got it—your learning preferences are becoming clear."}
             {currentPart === 'C' && "Perfect! Now we know how you learn best. Ready for the next step?"}
           </div>
@@ -473,7 +473,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
             onClick={handleNextPart}
             variant="primary"
             size="lg"
-            className="glow-orange-hover"
+            className="shadow-glow-primary-hover"
           >
             {currentPart === 'C' ? 'Complete Assessment' : 'Continue'}
           </Button>
@@ -488,7 +488,7 @@ export default function AssessmentStage2({ onComplete }: AssessmentStage2Props) 
 
       {/* End-of-Section Cliffhanger */}
       {currentPart === 'C' && (
-        <div className="mt-8 p-6 bg-gradient-to-r from-primary-aqua/10 to-primary-orange/10 border border-primary-aqua/20 rounded-2xl text-center">
+        <div className="mt-8 p-6 bg-gradient-to-r from-secondary-accent/10 to-primary-accent/10 border border-secondary-accent/20 rounded-2xl text-center">
           <p className="text-text-body mb-4">
             Excellent! We've discovered your learning style. Next, we'll assess your core life skills to build your personalized foundation.
           </p>

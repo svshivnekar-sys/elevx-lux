@@ -235,10 +235,10 @@ export default function AssessmentStage5({ onComplete }: AssessmentStage5Props) 
                     value={option}
                     checked={responses.responses[question.id] === option}
                     onChange={() => handleAnswer(question.id, option)}
-                    className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 mt-1"
+                    className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 mt-1"
                   />
                   <span className="text-text-body">
-                    <span className="font-medium text-primary-orange">{String.fromCharCode(65 + optionIndex)})</span> {option}
+                                         <span className="font-medium text-primary-accent">{String.fromCharCode(65 + optionIndex)})</span> {option}
                   </span>
                 </label>
               ))}
@@ -254,7 +254,7 @@ export default function AssessmentStage5({ onComplete }: AssessmentStage5Props) 
             onClick={handleComplete}
             variant="primary"
             size="lg"
-            className="glow-orange-hover"
+            className="shadow-glow-primary-hover"
           >
             Complete Assessment
           </Button>
@@ -269,7 +269,7 @@ export default function AssessmentStage5({ onComplete }: AssessmentStage5Props) 
 
       {/* End-of-Assessment Message */}
       {canProceed() && (
-        <div className="mt-8 p-6 bg-gradient-to-r from-primary-orange/10 to-primary-aqua/10 border border-primary-orange/20 rounded-2xl text-center">
+        <div className="mt-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20 rounded-2xl text-center">
           <p className="text-text-body mb-4">
             🎉 Congratulations! You've completed the full ElevX Assessment. 
             We're now analyzing your responses to create your personalized 21-Day Foundation Path.

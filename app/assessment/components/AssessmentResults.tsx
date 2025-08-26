@@ -187,13 +187,13 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {Object.entries(results.stage1.scores).map(([trait, score]) => (
             <div key={trait} className="text-center">
-              <div className="text-2xl font-bold text-primary-orange mb-1">{score}</div>
+              <div className="text-2xl font-bold text-primary-accent mb-1">{score}</div>
               <div className="text-sm text-text-muted uppercase">{trait}</div>
             </div>
           ))}
         </div>
         
-        <div className="mt-4 p-3 bg-primary-orange/10 rounded-lg">
+                 <div className="mt-4 p-3 bg-primary-accent/10 rounded-lg">
           <p className="text-sm text-text-body">
             <strong>Strongest areas:</strong> {results.stage1.strongestPoles.join(', ')} | 
             <strong>Growth area:</strong> {results.stage1.weakestPole}
@@ -212,7 +212,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           {Object.entries(results.stage2.scores).map(([style, score]) => (
             <div key={style} className="text-center p-3 bg-white/[0.02] rounded-lg">
-              <div className="text-2xl font-bold text-primary-aqua mb-1">{score}</div>
+                             <div className="text-2xl font-bold text-secondary-accent mb-1">{score}</div>
               <div className="text-sm text-text-muted">
                 {style === 'V' ? 'Visual' : style === 'A' ? 'Auditory' : 'Kinesthetic'}
               </div>
@@ -238,7 +238,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
           {Object.entries(results.stage3.scores).map(([skill, score]) => (
             <div key={skill} className="text-center p-3 bg-white/[0.02] rounded-lg">
-              <div className="text-2xl font-bold text-primary-orange mb-1">{score}/10</div>
+              <div className="text-2xl font-bold text-primary-accent mb-1">{score}/10</div>
               <div className="text-sm text-text-muted capitalize">{skill.replace(/([A-Z])/g, ' $1').trim()}</div>
             </div>
           ))}
@@ -253,7 +253,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
         )}
         
         {results.stage3.areasForGrowth.length > 0 && (
-          <div className="p-3 bg-primary-orange/10 rounded-lg">
+          <div className="p-3 bg-primary-accent/10 rounded-lg">
             <p className="text-sm text-text-body">
               <strong>Focus areas:</strong> {results.stage3.areasForGrowth.join(', ')}
             </p>
@@ -295,7 +295,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
         <h3 className="text-xl font-semibold mb-4 text-text-headings">Mindset Profile</h3>
         <div className="space-y-4">
           <div>
-            <h4 className="font-semibold text-primary-orange mb-2">{results.stage5.limitingBeliefArchetype}</h4>
+            <h4 className="font-semibold text-primary-accent mb-2">{results.stage5.limitingBeliefArchetype}</h4>
             <p className="text-text-body mb-3">{results.stage5.archetypeDescription}</p>
           </div>
           
@@ -304,7 +304,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
             <p className="text-text-body">{results.stage5.hiddenCost}</p>
           </div>
           
-          <div className="p-3 bg-primary-aqua/10 rounded-lg">
+          <div className="p-3 bg-secondary-accent/10 rounded-lg">
             <strong className="text-text-headings">First Step:</strong>
             <p className="text-text-body">{results.stage5.firstStep}</p>
           </div>
@@ -314,7 +314,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
   };
 
   const renderFoundationPath = () => (
-    <Card className="p-6 bg-gradient-to-r from-primary-orange/10 to-primary-aqua/10 border border-primary-orange/20">
+           <Card className="p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20">
       <h3 className="text-2xl font-bold mb-6 text-text-headings text-center">Your 21-Day Foundation Path</h3>
       
       <div className="space-y-6">
@@ -322,7 +322,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
           <h4 className="text-lg font-semibold mb-3 text-text-headings">Focus Areas</h4>
           <div className="flex flex-wrap gap-2">
             {foundationPath.focusAreas.map((area, index) => (
-              <span key={index} className="px-3 py-1 bg-primary-orange/20 text-primary-orange rounded-full text-sm">
+              <span key={index} className="px-3 py-1 bg-primary-accent/20 text-primary-accent rounded-full text-sm">
                 {area}
               </span>
             ))}
@@ -344,7 +344,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
           <ul className="space-y-2">
             {foundationPath.keyTechniques.map((technique, index) => (
               <li key={index} className="flex items-center space-x-2">
-                <span className="text-primary-orange">✓</span>
+                <span className="text-primary-accent">✓</span>
                 <span className="text-text-body">{technique}</span>
               </li>
             ))}
@@ -356,7 +356,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
           <div className="space-y-2">
             {foundationPath.milestones.map((milestone, index) => (
               <div key={index} className="flex items-center space-x-3 p-3 bg-white/[0.02] rounded-lg">
-                <div className="w-8 h-8 bg-primary-aqua rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-8 h-8 bg-secondary-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
                 <span className="text-text-body">{milestone}</span>
@@ -374,7 +374,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-20 h-20 bg-gradient-to-r from-primary-orange to-primary-aqua rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-20 h-20 bg-gradient-to-r from-primary-accent to-secondary-accent rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-white text-3xl">🎯</span>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-text-headings">
@@ -387,9 +387,9 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
 
           {/* Save Status */}
           {saveStatus === 'saving' && (
-            <div className="mb-6 p-4 bg-primary-aqua/10 border border-primary-aqua/20 rounded-lg text-center">
+            <div className="mb-6 p-4 bg-secondary-accent/10 border border-secondary-accent/20 rounded-lg text-center">
               <div className="flex items-center justify-center space-x-2">
-                <div className="w-4 h-4 border-2 border-primary-aqua/30 border-t-primary-aqua rounded-full animate-spin"></div>
+                                 <div className="w-4 h-4 border-2 border-secondary-accent/30 border-t-secondary-accent rounded-full animate-spin"></div>
                 <span className="text-text-body">Saving your results...</span>
               </div>
             </div>
@@ -425,7 +425,7 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
               onClick={onStartJourney}
               variant="primary"
               size="lg"
-              className="glow-orange-hover px-8 py-4 text-lg"
+              className="shadow-glow-primary-hover px-8 py-4 text-lg"
             >
               Start My Journey
             </Button>
@@ -440,24 +440,24 @@ export default function AssessmentResults({ results, onStartJourney, user }: Ass
             <h3 className="text-lg font-semibold mb-4 text-text-headings">What Happens Next?</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center">
-                <div className="w-12 h-12 bg-primary-orange/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-primary-orange text-xl">📚</span>
+                <div className="w-12 h-12 bg-primary-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                     <span className="text-primary-accent text-xl">📚</span>
                 </div>
                 <h4 className="font-medium text-text-headings mb-2">Daily Lessons</h4>
                 <p className="text-text-muted text-sm">10-15 minute focused sessions tailored to your learning style</p>
               </div>
               
               <div className="text-center">
-                <div className="w-12 h-12 bg-primary-aqua/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-primary-aqua text-xl">📊</span>
+                <div className="w-12 h-12 bg-secondary-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                     <span className="text-secondary-accent text-xl">📊</span>
                 </div>
                 <h4 className="font-medium text-text-headings mb-2">Progress Tracking</h4>
                 <p className="text-text-muted text-sm">Visual progress indicators and milestone celebrations</p>
               </div>
               
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-primary-orange/20 to-primary-aqua/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-primary-orange text-xl">🎯</span>
+                <div className="w-12 h-12 bg-gradient-to-r from-primary-accent/20 to-secondary-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                                     <span className="text-primary-accent text-xl">🎯</span>
                 </div>
                 <h4 className="font-medium text-text-headings mb-2">Real Application</h4>
                 <p className="text-text-muted text-sm">Practical exercises that apply to your specific goals</p>

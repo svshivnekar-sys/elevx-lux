@@ -310,7 +310,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
               value={goal}
               checked={responses.immediateGoals.primary === goal}
               onChange={() => handlePrimaryGoal(goal)}
-              className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
             />
             <span className="text-text-body">{goal}</span>
           </label>
@@ -330,7 +330,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                   value={goal}
                   checked={responses.immediateGoals.secondary.includes(goal)}
                   onChange={(e) => handleSecondaryGoal(goal, e.target.checked)}
-                  className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                  className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
                 />
                 <span className="text-text-body">{goal}</span>
               </label>
@@ -351,13 +351,13 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
       <div className="space-y-3">
         {motivationReasons.map((reason) => (
           <label key={reason} className="flex items-center space-x-3 cursor-pointer p-3 rounded-lg hover:bg-white/[0.02] transition-colors">
-            <input
-              type="checkbox"
-              value={reason}
-              checked={responses.deeperMotivation.reasons.includes(reason)}
-              onChange={(e) => handleMotivationReason(reason, e.target.checked)}
-              className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
-            />
+                          <input
+                type="checkbox"
+                value={reason}
+                checked={responses.deeperMotivation.reasons.includes(reason)}
+                onChange={(e) => handleMotivationReason(reason, e.target.checked)}
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
+              />
             <span className="text-text-body">{reason}</span>
           </label>
         ))}
@@ -376,7 +376,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                 value={driver}
                 checked={responses.deeperMotivation.coreDriver === driver}
                 onChange={() => handleCoreDriver(driver)}
-                className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
               />
               <span className="text-text-body">{driver}</span>
             </label>
@@ -405,8 +405,8 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                     onClick={() => handleValueRanking(value, position - 1)}
                     className={`w-8 h-8 rounded-full text-sm font-medium transition-colors ${
                       responses.personalValues.rankedValues[position - 1] === value
-                        ? 'bg-primary-orange text-white'
-                        : 'bg-white/[0.05] text-text-muted hover:bg-white/[0.1]'
+                        ? 'bg-primary-accent text-white'
+                        : 'bg-secondary-bg/5 text-text-muted hover:bg-secondary-bg/10'
                     }`}
                   >
                     {position}
@@ -433,8 +433,8 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                     onClick={() => handleScaleRating('freedomVsStability', rating)}
                     className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${
                       responses.personalValues.freedomVsStability === rating
-                        ? 'bg-primary-orange text-white'
-                        : 'bg-white/[0.05] text-text-muted hover:bg-white/[0.1]'
+                        ? 'bg-primary-accent text-white'
+                        : 'bg-secondary-bg/5 text-text-muted hover:bg-secondary-bg/10'
                     }`}
                   >
                     {rating}
@@ -452,8 +452,8 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                     onClick={() => handleScaleRating('integrity', rating)}
                     className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${
                       responses.personalValues.integrity === rating
-                        ? 'bg-primary-orange text-white'
-                        : 'bg-white/[0.05] text-text-muted hover:bg-white/[0.1]'
+                        ? 'bg-primary-accent text-white'
+                        : 'bg-secondary-bg/5 text-text-muted hover:bg-secondary-bg/10'
                     }`}
                   >
                     {rating}
@@ -488,7 +488,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                   checked={responses.emotionalTriggers.energyBoosters.includes(booster)}
                   onChange={(e) => handleEnergyBooster(booster, e.target.checked)}
                   disabled={responses.emotionalTriggers.energyBoosters.length >= 3 && !responses.emotionalTriggers.energyBoosters.includes(booster)}
-                  className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 disabled:opacity-50"
+                  className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 disabled:opacity-50"
                 />
                 <span className="text-text-body">{booster}</span>
               </label>
@@ -509,7 +509,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                   checked={responses.emotionalTriggers.motivationDrainers.includes(drainer)}
                   onChange={(e) => handleMotivationDrainer(drainer, e.target.checked)}
                   disabled={responses.emotionalTriggers.motivationDrainers.length >= 3 && !responses.emotionalTriggers.motivationDrainers.includes(drainer)}
-                  className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50 disabled:opacity-50"
+                  className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50 disabled:opacity-50"
                 />
                 <span className="text-text-body">{drainer}</span>
               </label>
@@ -537,7 +537,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                       value="true"
                       checked={responses.emotionalTriggers[key as keyof typeof responses.emotionalTriggers] === true}
                       onChange={() => handleYesNoQuestion(key as keyof typeof responses.emotionalTriggers, true)}
-                      className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                      className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
                     />
                     <span className="text-text-body">Yes</span>
                   </label>
@@ -549,7 +549,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
                       value="false"
                       checked={responses.emotionalTriggers[key as keyof typeof responses.emotionalTriggers] === false}
                       onChange={() => handleYesNoQuestion(key as keyof typeof responses.emotionalTriggers, false)}
-                      className="w-4 h-4 text-primary-orange bg-white/[0.05] border-white/[0.2] focus:ring-primary-orange/50"
+                      className="w-4 h-4 text-primary-accent bg-secondary-bg/5 border-border-subtle focus:ring-primary-accent/50"
                     />
                     <span className="text-text-body">No</span>
                   </label>
@@ -580,10 +580,10 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
               key={index}
               className={`w-3 h-3 rounded-full ${
                 index === currentLayer
-                  ? 'bg-primary-orange'
+                  ? 'bg-primary-accent'
                   : index < currentLayer
-                  ? 'bg-primary-aqua'
-                  : 'bg-white/[0.1]'
+                  ? 'bg-secondary-accent'
+                  : 'bg-border-subtle'
               }`}
             />
           ))}
@@ -603,7 +603,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
             onClick={handleNextLayer}
             variant="primary"
             size="lg"
-            className="glow-orange-hover"
+            className="shadow-glow-primary-hover"
           >
             {currentLayer === layers.length - 1 ? 'Complete Assessment' : 'Continue to Next Layer'}
           </Button>
@@ -618,7 +618,7 @@ export default function AssessmentStage4({ onComplete }: AssessmentStage4Props) 
 
       {/* End-of-Section Cliffhanger */}
       {currentLayer === layers.length - 1 && (
-        <div className="mt-8 p-6 bg-gradient-to-r from-primary-orange/10 to-primary-aqua/10 border border-primary-orange/20 rounded-2xl text-center">
+        <div className="mt-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20 rounded-2xl text-center">
           <p className="text-text-body mb-4">
             Excellent! We've mapped your goals and motivations. Finally, let's identify any limiting beliefs that might be holding you back.
           </p>
